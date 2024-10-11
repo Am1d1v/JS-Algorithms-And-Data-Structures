@@ -1,5 +1,4 @@
 
-let t1 = performance.now();
 function addUpTo(n){
     let initNumber = 0;
 
@@ -9,6 +8,10 @@ function addUpTo(n){
 
     return initNumber;
 }
+
+let t1 = performance.now();
+addUpTo(3000000);
 let t2 = performance.now();
 
-console.log(addUpTo(3000000), t2 - t1);
+
+console.log(((t2 - t1)/1000).toFixed(5));
